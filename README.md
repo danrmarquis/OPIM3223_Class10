@@ -2,10 +2,10 @@
 Introduction to Sound, Color, and Texture!
 
 ### Unity Sound
-- Adding a sound effect
+- Adding a sound effect via AudioSource
 - Adding AudioClips
 - Polishing sound
-- Adding hit sounds
+- Adding death sounds
 - Adding celebration sounds
 - Varying sound effects
 
@@ -22,3 +22,8 @@ Introduction to Sound, Color, and Texture!
 ### Changing volume of AudioSource component
 
 #### Resources
+- [AudioSource](https://docs.unity3d.com/ScriptReference/AudioSource.html)
+- [AudioClip](https://docs.unity3d.com/ScriptReference/AudioClip.html)
+- [Doppler Effect](https://docs.unity3d.com/Manual/class-AudioManager.html)
+- [Toggle](https://docs.unity3d.com/Manual/script-Toggle.html)
+- [Slider](https://docs.unity3d.com/Manual/script-Slider.html)
