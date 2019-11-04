@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
     void onPlayerDeath(Player player)
     {
         enemyProducer.SpawnEnemies(false);
-        Destroy(player.gameObject);
+        Destroy(player.gameObject, 2);
 
         Invoke("restartGame", 3);
     }

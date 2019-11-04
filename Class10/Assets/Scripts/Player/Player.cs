@@ -7,11 +7,13 @@ public class Player : MonoBehaviour
 {
 	public int health = 3;
     public event Action<Player> onPlayerDeath;
+    public AudioClip deathSound;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,8 @@ public class Player : MonoBehaviour
 		enemy.Attack(this);
 		if (health <= 0)
 		{
-            if(onPlayerDeath != null)
+            audioSource.PlayOneShot(deathSound);
+            if (onPlayerDeath != null)
             {
                 onPlayerDeath(this);
             }
