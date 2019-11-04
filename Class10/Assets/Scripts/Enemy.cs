@@ -8,12 +8,14 @@ public class Enemy : MonoBehaviour
 	public int health;
 	public int damage;
 	public Transform targetTransform;
+    public AudioClip deathSound;
+    private AudioSource audioSource;
 
 
 	// Start is called before the first frame update
 	void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
 	void FixedUpdate()
@@ -29,7 +31,8 @@ public class Enemy : MonoBehaviour
 		health -= damage;
 		if (health <= 0)
 		{
-			Destroy(this.gameObject);
+            audioSource.PlayOneShot(deathSound);
+            Destroy(this.gameObject, 2);
 		}
 	}
 
